@@ -1,0 +1,232 @@
+.status-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  min-height: 100vh;
+}
+
+.status-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 50px;
+}
+
+.status-search-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  margin-bottom: 50px;
+  border: 1px solid #e2e8f0;
+}
+
+.status-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .status-form {
+    flex-direction: row;
+  }
+}
+
+.status-input {
+  flex: 1;
+  padding: 18px 20px;
+  font-size: 18px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.3s;
+  background-color: #fafafa;
+}
+
+.status-input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 5px rgba(79, 70, 229, 0.15);
+  background-color: white;
+}
+
+.status-search-btn {
+  padding: 18px 40px;
+  background: #4f46e5;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.status-search-btn:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+}
+
+.status-error {
+  margin-top: 25px;
+  padding: 18px;
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  color: #b91c1c;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Result Card */
+.status-result-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+  border: 1px solid #e2e8f0;
+}
+
+.status-header {
+  padding: 30px;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: white;
+}
+
+.status-header.approved {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+}
+
+.status-header.rejected {
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+}
+
+.status-body {
+  padding: 40px;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .status-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.status-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+}
+
+.status-value {
+  font-size: 1.4rem;
+  color: #1e293b;
+  font-weight: 600;
+  margin: 0;
+}
+
+.status-id {
+  font-family: 'Courier New', monospace;
+  font-size: 1.6rem;
+  background: #eef2ff;
+  padding: 8px 16px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.status-amount {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #4f46e5;
+  margin: 0;
+}
+
+.status-section {
+  padding-top: 30px;
+  border-top: 1px solid #f1f5f9;
+  margin-top: 30px;
+}
+
+.status-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #475569;
+  margin-top: 12px;
+}
+
+.status-date {
+  font-size: 1rem;
+  color: #64748b;
+}
+
+.status-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.status-btn-primary,
+.status-btn-secondary {
+  padding: 16px 36px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s;
+  min-width: 200px;
+}
+
+.status-btn-primary {
+  background: #4f46e5;
+  color: white;
+}
+
+.status-btn-primary:hover {
+  background: #4338ca;
+  transform: translateY(-3px);
+}
+
+.status-btn-secondary {
+  background: #64748b;
+  color: white;
+}
+
+.status-btn-secondary:hover {
+  background: #475569;
+}
+
+/* Footer Text */
+.status-footer-text {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 1.1rem;
+  color: #64748b;
+}
+
+.status-apply-link {
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.status-apply-link:hover {
+  text-decoration: underline;
+}

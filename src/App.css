@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fb;
+  color: #333;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #6b7280;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #4b5563;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  padding: 30px;
+  margin-bottom: 25px;
+}
+
+.text-center { text-align: center; }
+.mt-20 { margin-top: 20px; }
+.mb-30 { margin-bottom: 30px; }
+.text-xl { font-size: 2.5rem; font-weight: 700; }
+.text-lg { font-size: 1.25rem; }
+.text-muted { color: #666; }
+
+.status-approved {
+  color: #059669;
+  background-color: #d1fae5;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.status-rejected {
+  color: #dc2626;
+  background-color: #fee2e2;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.loan-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.loan-item:last-child {
+  border-bottom: none;
+}
+
+.loan-item h3 {
+  margin: 0 0 8px 0;
+  color: #1f2937;
+}
+
+.no-loans {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-size: 1.2rem;
+}
