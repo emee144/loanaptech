@@ -3,7 +3,7 @@
 A comprehensive loan management platform that streamlines the loan application and tracking process.
 
 ## Features
-- Secure authentication with HTTP-only cookies and JWT
+- Secure authentication with HTTP-only cookies and JWTgitr
 - User dashboard with loan statistics
 - Loan application system with automatic payment calculations
 - Responsive design with glassmorphism UI
