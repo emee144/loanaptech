@@ -5,34 +5,55 @@ import './ApplyLoan.css';
 
 function ApplyLoan () {
   const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
-    name: '', email: '', amount: '', tenure: '', purpose: ''
+    name: '',
+    email: '',
+    amount: '',
+    tenure: '',
+    purpose: ''
   });
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({ 
+      ...formData, 
+      [e.target.name]: e.target.value 
+    });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const newLoan = {
-      id: Date.now().toString(),
-      ...formData,
-      amount: Number(formData.amount),
-      email: user.email,
-      status: Math.random() > 0.3 ? 'Approved' : 'Rejected',
-      appliedAt: new Date().toLocaleDateString('en-US', {
-        year: 'numeric', month: 'long', day: 'numeric'
-      })
-    };
+    try {
 
-    const loans = JSON.parse(localStorage.getItem('loans') || '[]');
-    loans.push(newLoan);
-    localStorage.setItem('loans', JSON.stringify(loans));
+      const res = await fetch("https://loanaptech-ijz6.onrender.com/api/loans/apply", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        credentials: "include",
+        body: JSON.stringify({
+          amount: formData.amount,
+          duration: formData.tenure,
+          purpose: formData.purpose
+        })
+      });
 
-    alert(`Application submitted successfully!\nYour Loan ID: ${newLoan.id}`);
-    navigate(`/loan/${newLoan.id}`);
+      const data = await res.json();
+
+      if (!res.ok) {
+        alert(data.error || "Failed to apply for loan");
+        return;
+      }
+
+      alert(`Application submitted successfully!\nLoan ID: ${data.loan._id}`);
+
+      navigate(`/loan/${data.loan._id}`);
+
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong");
+    }
   };
 
   return (
@@ -41,6 +62,7 @@ function ApplyLoan () {
         <h1 className="apply-title">Apply for Loan</h1>
 
         <form onSubmit={handleSubmit} className="apply-form">
+
           <div className="input-group">
             <label htmlFor="name">Full Name</label>
             <input
@@ -114,8 +136,9 @@ function ApplyLoan () {
           <button type="submit" className="apply-submit-btn">
             Submit Application
           </button>
+
         </form>
-      </div>
+      </div> 
     </div>
   );
 };
