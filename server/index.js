@@ -11,7 +11,10 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: "https://loanaptech-ijz6.onrender.com", 
+   origin: [
+    "http://localhost:5173",
+    "https://loanaptech-six.vercel.app/"
+  ],
   credentials: true 
 }));
 app.use(express.json());
