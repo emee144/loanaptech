@@ -35,7 +35,7 @@ function Navbar() {
 
   const handleLogout = async () => {
     try {
-      await fetch("http://localhost:5000/api/auth/logout", {
+      await fetch("https://loanaptech-ijz6.onrender.com/api/auth/logout", {
         method: "POST",
         credentials: "include"
       });
