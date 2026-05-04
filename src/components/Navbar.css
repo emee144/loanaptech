@@ -64,7 +64,14 @@
 .nav-cta:hover {
   background: #4338ca;
 }
-
+.logout-btn {
+  background-color: rgb(146, 97, 7);
+  color: white;
+  border-radius: 8px;
+  border: 1px solid rgb(136, 92, 9);
+  height: 30px;
+ 
+}
 /* Mobile Toggle */
 .navbar-toggle {
   display: none;
